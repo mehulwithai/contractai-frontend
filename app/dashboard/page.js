@@ -111,7 +111,7 @@ export default function Dashboard() {
       )}
 
       {/* Upload zone */}
-      {(isSubscribed || reviews.length === 0) && (
+      {true && (
         <div style={{ marginBottom: '40px' }}>
           <UploadZone onUpload={handleUpload} loading={loading} />
           {error && <div className="error-msg" style={{ marginTop: '12px' }}>{error}</div>}
