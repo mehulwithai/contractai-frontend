@@ -21,30 +21,32 @@ export default function Dashboard() {
   const router = useRouter()
 
   useEffect(() => {
+    let cancelled = false
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) { router.push('/login'); return }
+      if (cancelled) return
       setUser(session.user)
-      loadReviews()
-      checkSubscription()
+      loadDashboardData()
     })
+
+    return () => { cancelled = true }
   }, [])
 
-  const loadReviews = async () => {
+  // Fetch reviews + subscription status at the same time instead of one after another.
+  // This alone roughly halves the perceived wait on a normal connection.
+  const loadDashboardData = async () => {
+    setFetching(true)
     try {
-      const data = await apiCall('/api/reviews/')
-      setReviews(data?.reviews || [])
-    } catch (e) {
-      console.error(e)
+      const [reviewsData, billingData] = await Promise.all([
+        apiCall('/api/reviews/').catch(() => null),
+        apiCall('/api/billing/status').catch(() => null),
+      ])
+      setReviews(reviewsData?.reviews || [])
+      setIsSubscribed(billingData?.is_subscribed || false)
     } finally {
       setFetching(false)
     }
-  }
-
-  const checkSubscription = async () => {
-    try {
-      const data = await apiCall('/api/billing/status')
-      setIsSubscribed(data?.is_subscribed || false)
-    } catch (e) {}
   }
 
   const handleUpload = async (file) => {
@@ -61,12 +63,6 @@ export default function Dashboard() {
     }
   }
 
-  const formatDate = (iso) => {
-    return new Date(iso).toLocaleDateString('en-IN', {
-      day: 'numeric', month: 'short', year: 'numeric'
-    })
-  }
-
   return (
     <div style={{ maxWidth: '760px', margin: '0 auto', padding: '32px 24px' }}>
 
@@ -80,8 +76,8 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* Free tier banner */}
-      {!isSubscribed && reviews.length >= 1 && (
+      {/* Free tier banner — only shown once data has actually loaded */}
+      {!fetching && !isSubscribed && reviews.length >= 1 && (
         <div style={{
           background: 'var(--amber-bg)',
           border: '1px solid var(--amber-border)',
@@ -110,22 +106,22 @@ export default function Dashboard() {
         </div>
       )}
 
-      {/* Upload zone */}
-      {true && (
-        <div style={{ marginBottom: '40px' }}>
-          <UploadZone onUpload={handleUpload} loading={loading} />
-          {error && <div className="error-msg" style={{ marginTop: '12px' }}>{error}</div>}
-        </div>
-      )}
+      {/* Upload zone — always available; backend enforces the actual limit */}
+      <div style={{ marginBottom: '40px' }}>
+        <UploadZone onUpload={handleUpload} loading={loading} />
+        {error && <div className="error-msg" style={{ marginTop: '12px' }}>{error}</div>}
+      </div>
 
       {/* Reviews list */}
       <div>
-        <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px' }}>
-          {reviews.length > 0 ? `Past reviews (${reviews.length})` : ''}
-        </h2>
+        {!fetching && reviews.length > 0 && (
+          <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px' }}>
+            Past reviews ({reviews.length})
+          </h2>
+        )}
 
         {fetching ? (
-          <div style={{ color: 'var(--text-secondary)', padding: '20px 0' }}>Loading…</div>
+          <SkeletonList />
         ) : reviews.length === 0 ? (
           <EmptyState />
         ) : (
@@ -216,6 +212,37 @@ function EmptyState() {
       <div style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>
         Upload your first contract above — try an NDA, vendor agreement, or any PDF
       </div>
+    </div>
+  )
+}
+
+/* Shows 3 grey placeholder rows shaped like real review rows, with a soft
+   pulse animation — this is what makes the wait FEEL shorter even when the
+   actual fetch time doesn't change. People perceive skeletons as ~30% faster
+   than a blank screen or spinner for the same real-world delay. */
+function SkeletonList() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      {[0, 1, 2].map(i => (
+        <div key={i} style={{
+          background: 'var(--bg-secondary)',
+          border: '1px solid var(--border)',
+          borderRadius: '8px',
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px',
+        }}>
+          <div className="skeleton-pulse" style={{ width: '20px', height: '20px', borderRadius: '4px' }} />
+          <div style={{ flex: 1 }}>
+            <div className="skeleton-pulse" style={{ width: '55%', height: '13px', borderRadius: '4px', marginBottom: '8px' }} />
+            <div className="skeleton-pulse" style={{ width: '35%', height: '11px', borderRadius: '4px' }} />
+          </div>
+          <div className="skeleton-pulse" style={{ width: '70px', height: '22px', borderRadius: '20px' }} />
+        </div>
+      ))}
+
+      
     </div>
   )
 }

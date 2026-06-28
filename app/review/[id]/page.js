@@ -79,6 +79,7 @@ export default function ReviewPage() {
         borderRadius: '12px',
         padding: '24px',
         marginBottom: '24px',
+        fontWeight: 500,
       }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
           <div>
@@ -89,7 +90,7 @@ export default function ReviewPage() {
               {review.filename}
             </h1>
           </div>
-          <span style={{
+          <span className="hover-effect" style={{
             background: riskBadge.bg,
             border: `1px solid ${riskBadge.border}`,
             color: riskBadge.text,
@@ -176,7 +177,7 @@ export default function ReviewPage() {
       {result.positives?.length > 0 && (
         <div style={{ marginBottom: '32px' }}>
           <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>✅ What's in your favour</h2>
-          <div style={{
+          <div className="hover-effect"style={{
             background: 'var(--green-bg)',
             border: '1px solid var(--green-border)',
             borderRadius: '8px',
@@ -195,7 +196,7 @@ export default function ReviewPage() {
       {result.questions_to_ask?.length > 0 && (
         <div style={{ marginBottom: '40px' }}>
           <h2 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '12px' }}>❓ Ask before signing</h2>
-          <div style={{
+          <div className="hover-effect" style={{
             background: 'var(--bg-secondary)',
             border: '1px solid var(--border)',
             borderRadius: '8px',
@@ -242,7 +243,7 @@ function FlagCard({ flag }) {
   }
 
   return (
-    <div style={{
+    <div className="hover-effect"style={{
       background: s.bg,
       border: `1px solid ${s.border}`,
       borderRadius: '10px',
@@ -268,7 +269,7 @@ function FlagCard({ flag }) {
       </div>
 
       {/* Clause */}
-      <blockquote style={{
+      <blockquote  style={{
         fontSize: '13px',
         fontStyle: 'italic',
         color: s.text,
@@ -282,13 +283,13 @@ function FlagCard({ flag }) {
       </blockquote>
 
       {/* Issue */}
-      <p style={{ fontSize: '14px', color: s.text, lineHeight: 1.6, marginBottom: '12px' }}>
+      <p style={{ fontSize: '14px', color: s.text, lineHeight: 1.6, marginBottom: '12px', fontWeight: 500 }}>
         {flag.issue}
       </p>
 
       {/* Suggestion */}
-      <div style={{
-        background: 'rgba(255,255,255,0.5)',
+      <div className="hover-effect" style={{
+        background: 'var(--box)',
         borderRadius: '6px',
         padding: '10px 14px',
         display: 'flex',
@@ -300,7 +301,7 @@ function FlagCard({ flag }) {
           <div style={{ fontSize: '11px', fontWeight: 600, color: s.text, opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>
             Suggested fix
           </div>
-          <div style={{ fontSize: '13px', color: s.text, lineHeight: 1.5 }}>
+          <div style={{ fontSize: '13px', color: s.text, lineHeight: 1.5, fontWeight: 500 }}>
             {flag.suggestion}
           </div>
         </div>

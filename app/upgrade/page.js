@@ -71,7 +71,7 @@ fontWeight: 500,
 🎉 You're subscribed! Unlimited reviews are now unlocked. </div>
 )}
 
-```
+
   {paymentStatus === 'cancelled' && (
     <div
       style={{
@@ -115,6 +115,7 @@ fontWeight: 500,
         textTransform: 'uppercase',
         letterSpacing: '0.06em',
         marginBottom: '8px',
+        fontWeight: 700,
       }}
     >
       Growth plan
@@ -129,10 +130,10 @@ fontWeight: 500,
         marginBottom: '4px',
       }}
     >
-      $49
+      $10
     </div>
 
-    <div style={{ color: 'var(--text-secondary)', marginBottom: '28px' }}>
+    <div style={{ color: 'var(--text-secondary)', marginBottom: '28px', fontWeight: 500 }}>
       per month · cancel anytime
     </div>
 
@@ -165,7 +166,7 @@ fontWeight: 500,
           <span style={{ color: 'var(--accent)', fontWeight: 700 }}>
             ✓
           </span>
-          <span style={{ color: 'var(--text-secondary)' }}>{feat}</span>
+          <span style={{ color: 'var(--text-secondary)', fontWeight: 500   }}>{feat}</span>
         </div>
       ))}
     </div>
@@ -193,7 +194,7 @@ fontWeight: 500,
         disabled={loading}
         className="btn-primary"
       >
-        {loading ? 'Loading…' : 'Subscribe — $49/month'}
+        {loading ? 'Loading…' : 'Subscribe — $10/month'}
       </button>
     )}
 
@@ -202,6 +203,7 @@ fontWeight: 500,
         color: 'var(--text-muted)',
         fontSize: '12px',
         marginTop: '12px',
+        fontWeight: 600,
       }}
     >
       Secured by Stripe · Cancel anytime
@@ -211,7 +213,7 @@ fontWeight: 500,
   <div style={{ textAlign: 'center' }}>
     <a
       href="/dashboard"
-      style={{ color: 'var(--text-secondary)', fontSize: '14px' }}
+      style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500   }}
     >
       ← Back to dashboard
     </a>

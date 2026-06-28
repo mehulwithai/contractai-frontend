@@ -38,7 +38,7 @@ export default function Navbar() {
       zIndex: 100,
     }}>
       {/* Logo */}
-      <a href={user ? '/dashboard' : '/'} style={{
+      <a href={user ? '/' : '/'} style={{
         fontWeight: 700,
         fontSize: '18px',
         color: 'var(--text-primary)',
@@ -80,11 +80,13 @@ export default function Navbar() {
               color: 'var(--text-secondary)',
               fontSize: '14px',
               textDecoration: 'none',
+              fontWeight: 500,
             }}>Dashboard</a>
             <a href="/upgrade" style={{
               color: 'var(--text-secondary)',
               fontSize: '14px',
               textDecoration: 'none',
+              fontWeight: 500,
             }}>Upgrade</a>
             <button onClick={signOut} style={{
               background: 'transparent',
@@ -93,6 +95,7 @@ export default function Navbar() {
               padding: '6px 12px',
               border: '1px solid var(--border)',
               borderRadius: '6px',
+              fontWeight: 500,
             }}>Sign out</button>
           </>
         ) : (
@@ -101,6 +104,7 @@ export default function Navbar() {
               color: 'var(--text-secondary)',
               fontSize: '14px',
               textDecoration: 'none',
+              fontWeight: 500,
             }}>Sign in</a>
             <a href="/signup" style={{
               background: 'var(--accent)',
