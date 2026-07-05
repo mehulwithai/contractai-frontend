@@ -5,6 +5,9 @@ import Navbar from '../components/Navbar'
 export const metadata = {
   title: 'ContractAI — Contract review for founders',
   description: 'Upload any contract and get a plain-English risk analysis in 30 seconds.',
+  verification: {
+    google: 'R3oqhsurklfnEJg2ll6ECUFiYzoFUEhjo9QQ1qJcRL0',
+  },
 }
 
 export default function RootLayout({ children }) {
