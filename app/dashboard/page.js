@@ -102,7 +102,7 @@ export default function Dashboard() {
             fontWeight: 500,
             textDecoration: 'none',
             whiteSpace: 'nowrap',
-          }}>Upgrade — $49/mo</a>
+          }}>Upgrade — $10/mo</a>
         </div>
       )}
 
