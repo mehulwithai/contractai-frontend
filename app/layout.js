@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 import { ThemeProvider } from '../components/ThemeProvider'
 import Navbar from '../components/Navbar'
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
