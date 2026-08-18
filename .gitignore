@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sensitive & temporary files
+recovery-codes.txt
+*.zip
+New folder/
+files/
+
