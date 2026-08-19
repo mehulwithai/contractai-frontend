@@ -206,7 +206,7 @@ fontWeight: 500,
         fontWeight: 600,
       }}
     >
-      Secured by Stripe · Cancel anytime
+      Secured by Whop · Cancel anytime
     </div>
   </div>
 
