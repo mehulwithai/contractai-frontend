@@ -11,6 +11,15 @@ export default async function sitemap() {
 
   const routes = [
     '',
+    '/ai-contract-review',
+    '/contract-review',
+    '/contract-analyzer',
+    '/contract-clause-analyzer',
+    '/contract-risk-analysis',
+    '/nda-review',
+    '/nda-analyzer',
+    '/freelance-contract-review',
+    '/contract-review-for-startups',
     '/privacy',
     '/terms',
     '/disclaimer',

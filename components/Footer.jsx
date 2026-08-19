@@ -43,10 +43,24 @@ export default function Footer() {
             <div style={{ fontFamily: 'var(--inter)', fontSize: '14px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '14px' }}>
               Product
             </div>
-            <FooterLink href="#how-it-works">How it works</FooterLink>
-            <FooterLink href="#pricing">Pricing</FooterLink>
-            <FooterLink href="#faq">FAQ</FooterLink>
+            <FooterLink href="/#how-it-works">How it works</FooterLink>
+            <FooterLink href="/#pricing">Pricing</FooterLink>
+            <FooterLink href="/#faq">FAQ</FooterLink>
             <FooterLink href="/signup">Get started</FooterLink>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <div style={{ fontFamily: 'var(--inter)', fontSize: '14px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '14px' }}>
+              Solutions
+            </div>
+            <FooterLink href="/ai-contract-review">AI Contract Review</FooterLink>
+            <FooterLink href="/contract-analyzer">Contract Analyzer</FooterLink>
+            <FooterLink href="/contract-clause-analyzer">Clause Analyzer</FooterLink>
+            <FooterLink href="/contract-risk-analysis">Risk Analysis</FooterLink>
+            <FooterLink href="/nda-review">NDA Review</FooterLink>
+            <FooterLink href="/freelance-contract-review">Freelance Review</FooterLink>
+            <FooterLink href="/contract-review-for-startups">Startup Contracts</FooterLink>
           </div>
 
           {/* Company */}
