@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'AI Contract Review for Startups & Founders',
-  description: 'Built for founders, not law firms. Review SaaS agreements, vendor contracts, contractor NDAs, and customer agreements in 30 seconds with AI.',
+  description: 'Built for founders, not law firms. Review SaaS agreements, vendor contracts, contractor NDAs, and customer agreements in seconds with AI.',
   keywords: ['Startup Contract Review', 'Founder Contract Review', 'SaaS Agreement Analysis', 'Vendor Contract Review'],
   alternates: {
     canonical: '/contract-review-for-startups',
@@ -44,7 +44,7 @@ export default function StartupContractReviewPage() {
           {[
             { title: '1. Customer Enterprise MSAs', desc: 'Customer agreements often insert custom indemnity or strict uptime SLA penalty clauses.' },
             { title: '2. SaaS & Vendor Terms', desc: 'Watch out for auto-expanding seat billing, multi-year lock-ins, and data licensing terms.' },
-            { title: '3. Contractor & Developer Agreements', desc: 'Ensure 100% assignment of code and IP to the company prior to equity or cash payouts.' },
+            { title: '3. Contractor & Developer Agreements', desc: 'Startups should make sure ownership of company-related intellectual property is clearly defined in contractor, employee, and development agreements, including when and under what conditions ownership transfers.' },
             { title: '4. Mutual Non-Disclosure Agreements', desc: 'Protect pitch deck data, source code, and customer lists during investor calls.' },
             { title: '5. Partnership & Distribution Terms', desc: 'Verify exclusivity boundaries, revenue split models, and termination rights.' },
             { title: '6. Employment Agreements', desc: 'Proprietary Information & Inventions Agreements (PIIA) to secure founder/employee IP.' },
@@ -68,12 +68,12 @@ export default function StartupContractReviewPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {[
-              { area: 'IP Assignment', desc: 'Confirm your company owns 100% of the code, trademarks, and algorithms created by contractors.' },
-              { area: 'Uncapped Exposure', desc: 'Never grant unlimited liability to enterprise clients; cap liability at 12-month fees.' },
+              { area: 'IP Assignment', desc: 'Ensure intellectual property ownership is explicitly defined, including when and under what conditions rights transfer to the company.' },
+              { area: 'Uncapped Exposure', desc: 'A commonly negotiated position is capping liability at fees paid under the contract, depending on the deal scope.' },
               { area: 'Hidden Auto-Renewals', desc: 'Track vendor auto-renewals to prevent unwanted annual SaaS renewals.' },
               { area: 'Data Ownership & AI Rights', desc: 'Ensure vendors do not use your proprietary customer data to train their public AI models.' },
-              { area: 'Convenience Termination', desc: 'Ensure key enterprise revenue cannot be canceled on 3-day notice without cause.' },
-              { area: 'Arbitration Jurisdiction', desc: 'Keep court jurisdiction in your home state to avoid travelling for disputes.' },
+              { area: 'Convenience Termination', desc: 'Ensure key enterprise revenue cannot be canceled on short notice without cause.' },
+              { area: 'Arbitration Jurisdiction', desc: 'Check dispute jurisdiction clauses to avoid costly out-of-state litigation.' },
             ].map((f, i) => (
               <div key={i} style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '12px', padding: '20px' }}>
                 <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'var(--accent)', marginBottom: '8px' }}>{f.area}</h3>
@@ -88,7 +88,7 @@ export default function StartupContractReviewPage() {
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ background: 'var(--accent)', color: '#fff', padding: '40px 24px', borderRadius: '16px', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '12px' }}>Analyze Your Startup Contract</h2>
-          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Save legal bills and move fast. Get a plain-English AI audit in 30 seconds.</p>
+          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Save legal bills and move fast. Get a plain-English AI audit in seconds.</p>
           <Link href="/signup" style={{ background: '#fff', color: 'var(--accent)', padding: '12px 24px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             Review Startup Agreement
           </Link>

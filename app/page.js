@@ -267,7 +267,7 @@ function HowItWorks() {
 
 function ComparisonTable() {
   const rows = [
-    ['Cost per review', '$49/mo unlimited', '$300–800 each', 'Free, but no structure'],
+    ['Cost per review', '$10/mo unlimited', '$300–800 each', 'Free, but no structure'],
     ['Turnaround time', 'Under 1 minute', '3–10 business days', 'Instant'],
     ['Plain-English flags', '✓', '✗ — legal memo format', '✗ — no consistent format'],
     ['Suggested redlines', '✓', 'Sometimes, at extra cost', '✗'],
@@ -372,7 +372,7 @@ function Pricing() {
           <div style={{ fontFamily: 'var(--inter)', fontSize: '50px', fontWeight: 600, color: 'var(--accent)', lineHeight: 1, fontWeight: 700 }}>$10</div>
           <div style={{ color: 'var(--text-secondary)', marginBottom: '28px', fontSize: '14px', fontWeight: 500 }}>per month · cancel anytime</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '280px', margin: '0 auto 28px', textAlign: 'left', fontWeight: 500 }}>
-            {['Unlimited contract reviews', 'Risk flags in plain English', 'Suggested redline language', 'Contract vault & history', 'Renewal date alerts'].map(f => (
+            {['Unlimited contract reviews', 'Risk flags in plain English', 'Suggested redline language', 'Contract vault & history', 'Key dates & deadlines'].map(f => (
               <div key={f} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '14px' }}>
                 <span style={{ color: 'var(--accent)', fontWeight: 700 }}>✓</span>
                 <span style={{ color: 'var(--text-secondary)' }}>{f}</span>
@@ -401,7 +401,7 @@ function FAQ() {
     { q: 'Is this a replacement for a lawyer?', a: 'No. ContractAI helps you understand what you\'re signing and flag obvious red flags fast. For high-stakes or unusually complex agreements, we\'ll always recommend a qualified lawyer — and our review even tells you when that\'s the smart move.' },
     { q: 'What file types can I upload?', a: 'PDF and Word (.docx) files, up to 10MB. That covers the vast majority of contracts you\'ll receive by email.' },
     { q: 'Is my contract data kept private?', a: 'Yes. Your documents are stored securely and never used to train any AI model. Only you can see your own reviews.' },
-    { q: 'What happens after my free review?', a: 'You can upgrade to unlimited reviews for $49/month, cancel anytime. No card required to try your first one.' },
+    { q: 'What happens after my free review?', a: 'You can upgrade to unlimited reviews for $10/month, cancel anytime. No card required to try your first one.' },
     { q: 'What kinds of contracts does it handle?', a: 'NDAs, vendor agreements, freelance contracts, employment offers, SaaS subscription terms, and most standard business agreements.' },
   ]
   const [open, setOpen] = useState(0)

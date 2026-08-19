@@ -151,7 +151,7 @@ fontWeight: 500,
         'Risk flags in plain English',
         'Suggested redline language',
         'Contract vault & search history',
-        'Renewal date alerts',
+        'Key dates & deadlines',
         'Priority support',
       ].map((feat) => (
         <div

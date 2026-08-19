@@ -33,8 +33,8 @@ export default function Footer() {
                 ContractAI
               </span>
             </div>
-            <p style={{  fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '220px', fontWeight: 500 }}>
-              The best tool to generate contracts and legal documents in seconds. Save time and money with ContractAI. 
+            <p style={{  fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '240px', fontWeight: 500 }}>
+              AI-powered contract review that helps you understand agreements, spot potential risks, and negotiate with confidence.
             </p>
           </div>
 

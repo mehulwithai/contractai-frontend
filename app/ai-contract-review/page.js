@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'AI Contract Review — Understand Your Contracts Before You Sign',
-  description: 'Upload any contract or legal document and get an instant AI-powered risk analysis, plain-English clause explanations, and suggested revisions in 30 seconds.',
+  description: 'Upload any contract or legal document and get an instant AI-powered risk analysis, plain-English clause explanations, and suggested revisions in seconds.',
   keywords: ['AI Contract Review', 'AI Legal Document Review', 'Contract Risk Scanner', 'Automated Contract Analysis'],
   alternates: {
     canonical: '/ai-contract-review',
@@ -54,7 +54,7 @@ export default function AIContractReviewPage() {
           AI Contract Review — Understand Your Contracts Before You Sign
         </h1>
         <p style={{ fontSize: '18px', color: 'var(--text-secondary)', maxWidth: '720px', margin: '0 auto 32px', lineHeight: 1.6 }}>
-          Never sign a one-sided agreement again. ContractAI uses artificial intelligence to scan legal documents, highlight hidden risks, translate legal jargon into plain English, and suggest safer language in 30 seconds.
+          Never sign a one-sided agreement again. ContractAI uses artificial intelligence to scan legal documents, highlight hidden risks, translate legal jargon into plain English, and suggest safer language in seconds.
         </p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link href="/signup" style={{
@@ -187,9 +187,9 @@ export default function AIContractReviewPage() {
       {/* Internal Links & CTA */}
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '48px 24px', textAlign: 'center' }}>
         <div style={{ background: 'var(--accent)', color: '#fff', padding: '48px 24px', borderRadius: '16px', marginBottom: '64px' }}>
-          <h2 style={{ fontSize: '30px', fontWeight: 700, marginBottom: '12px' }}>Review Your Contract in 30 Seconds</h2>
+          <h2 style={{ fontSize: '30px', fontWeight: 700, marginBottom: '12px' }}>Review Your Contract in Seconds</h2>
           <p style={{ fontSize: '16px', maxWidth: '560px', margin: '0 auto 28px', opacity: 0.9 }}>
-            Join thousands of founders, freelancers, and business owners who review contracts faster and safer with ContractAI.
+            Join founders, freelancers, and business owners who review contracts faster with ContractAI.
           </p>
           <Link href="/signup" style={{
             background: '#fff',

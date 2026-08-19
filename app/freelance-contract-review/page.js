@@ -43,16 +43,16 @@ export default function FreelanceContractReviewPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
           {[
             { title: '1. Payment Amount & Currency', desc: 'Verify exact fixed rate, hourly caps, or milestone payment triggers.' },
-            { title: '2. Payment Schedule & Terms', desc: 'Avoid Net 60 or Net 90 terms. Push for Net 15 or 50% upfront deposit.' },
-            { title: '3. Late Payment Penalties', desc: 'Ensure late fees (e.g., 1.5% per month) apply to overdue invoices.' },
+            { title: '2. Payment Schedule & Terms', desc: 'Longer payment windows like Net 60 or Net 90 may impact cash flow; many freelancers negotiate for Net 15 or upfront deposits.' },
+            { title: '3. Late Payment Terms', desc: 'Check whether late payment interest terms apply, subject to applicable local regulations.' },
             { title: '4. Scope of Work (SOW)', desc: 'Explicit deliverables list to prevent client scope creep.' },
             { title: '5. Revision Limits', desc: 'Cap rounds of revisions (e.g., max 2 rounds included; extra charged hourly).' },
-            { title: '6. IP Ownership Transfer', desc: 'Crucial: Ensure IP is transferred ONLY after full payment is received.' },
+            { title: '6. IP Ownership Transfer', desc: 'A commonly negotiated term for freelancers is ensuring IP ownership transfers upon receipt of full payment.' },
             { title: '7. Portfolio Usage Rights', desc: 'Retain rights to showcase non-confidential work in your portfolio.' },
-            { title: '8. Termination & Kill Fees', desc: 'Include a kill fee (e.g., 25–50%) if the client cancels project mid-way.' },
-            { title: '9. Liability Caps', desc: 'Limit liability strictly to the total fees paid under the project.' },
-            { title: '10. Confidentiality Timeframes', desc: 'Confidentiality should be reasonable and time-bound (e.g., 2 years).' },
-            { title: '11. Non-Compete Prohibitions', desc: 'Never agree to non-competes that restrict working with other clients.' },
+            { title: '8. Termination & Kill Fees', desc: 'Consider specifying a kill fee if the client cancels project mid-way.' },
+            { title: '9. Liability Caps', desc: 'A commonly negotiated position is limiting liability strictly to fees paid under the project.' },
+            { title: '10. Confidentiality Timeframes', desc: 'Confidentiality obligations are often time-bound (e.g., 2 to 5 years depending on the deal).' },
+            { title: '11. Non-Compete Clauses', desc: 'Non-compete clauses can restrict future client work and are worth reviewing carefully.' },
             { title: '12. Independent Contractor Status', desc: 'Confirm you control your own hours, tools, and location.' },
           ].map((item, idx) => (
             <div key={idx} style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)', borderRadius: '12px', padding: '20px' }}>
@@ -90,7 +90,7 @@ export default function FreelanceContractReviewPage() {
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ background: 'var(--accent)', color: '#fff', padding: '40px 24px', borderRadius: '16px', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '12px' }}>Review Your Client Contract</h2>
-          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Don't risk unpaid work. Get a free AI contract audit in 30 seconds.</p>
+          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Don't risk unpaid work. Get a free AI contract audit in seconds.</p>
           <Link href="/signup" style={{ background: '#fff', color: 'var(--accent)', padding: '12px 24px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             Analyze Client Contract
           </Link>

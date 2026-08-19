@@ -44,7 +44,7 @@ export default function NDAReviewPage() {
           {[
             { title: '1. Mutual vs. One-Sided', desc: 'Is confidentiality protected for both parties or strictly one-way?' },
             { title: '2. Definition of Confidential Info', desc: 'Is information clearly defined, or does it cover all oral and written chatter indefinitely?' },
-            { title: '3. Duration of Confidentiality', desc: 'Standard business NDAs last 2 to 5 years. Beware of perpetual obligations unless dealing with trade secrets.' },
+            { title: '3. Duration of Confidentiality', desc: 'Business NDAs often specify confidentiality terms of 2 to 5 years, though appropriate duration depends on the contract and applicable law.' },
             { title: '4. Permitted Disclosures', desc: 'Can you disclose information to your legal, financial, and tax advisors?' },
             { title: '5. Standard Exclusions', desc: 'Information already public, previously known, or independently developed must be excluded.' },
             { title: '6. Return or Destruction of Data', desc: 'Does the clause require destroying electronic backups, which may be technically impossible?' },
@@ -85,7 +85,7 @@ export default function NDAReviewPage() {
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ background: 'var(--accent)', color: '#fff', padding: '40px 24px', borderRadius: '16px', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '12px' }}>Upload Your NDA for Instant Audit</h2>
-          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Check confidentiality duration and spot hidden clauses in 30 seconds.</p>
+          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Check confidentiality duration and spot hidden clauses in seconds.</p>
           <Link href="/signup" style={{ background: '#fff', color: 'var(--accent)', padding: '12px 24px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             Analyze NDA Free
           </Link>

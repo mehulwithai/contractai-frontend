@@ -55,12 +55,12 @@ export default function ContractReviewPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           {[
-            { num: '1', title: 'Payment Terms & Schedule', detail: 'Check payment amounts, net payment windows (e.g., Net 15 vs Net 60), late fee percentages, and invoicing triggers.' },
+            { num: '1', title: 'Payment Terms & Schedule', detail: 'Check payment amounts, net payment windows (e.g., Net 15 vs Net 60), late fee terms, and invoicing triggers.' },
             { num: '2', title: 'Contract Duration & Expiration', detail: 'Identify start and end dates. Look closely for automatic renewal clauses requiring advance written cancellation.' },
-            { num: '3', title: 'Termination Rights', detail: 'Can either party terminate without cause? Check required notice periods (30 days is standard) and termination fees.' },
-            { num: '4', title: 'Limitation of Liability', detail: 'Ensure liability is capped (ideally at fees paid in the last 12 months) and indirect or consequential damages are waived.' },
+            { num: '3', title: 'Termination Rights', detail: 'Can either party terminate without cause? Check required notice periods (30 days is a common window, depending on the agreement) and termination terms.' },
+            { num: '4', title: 'Limitation of Liability', detail: 'A commonly negotiated position is capping liability at fees paid under the agreement, though appropriate limits depend on the deal.' },
             { num: '5', title: 'Indemnification Obligations', detail: 'Beware of broad, one-sided indemnity clauses requiring you to cover all legal defense fees regardless of fault.' },
-            { num: '6', title: 'Confidentiality & Non-Disclosure', detail: 'Verify what constitutes confidential information and ensure the confidentiality period has a clear end date (e.g., 2–5 years).' },
+            { num: '6', title: 'Confidentiality & Non-Disclosure', detail: 'Verify what constitutes confidential info; confidentiality obligations often specify periods of 2 to 5 years depending on applicable law.' },
             { num: '7', title: 'Intellectual Property Rights', detail: 'Confirm who owns work product. Ensure IP transfer is strictly conditional upon receipt of full payment.' },
             { num: '8', title: 'Scope of Work & Deliverables', detail: 'Ensure project scope, milestones, and client review timelines are clearly defined to prevent scope creep.' },
             { num: '9', title: 'Dispute Resolution & Forum', detail: 'Check where lawsuits or arbitration must take place. Defending a case in another state or country is costly.' },
