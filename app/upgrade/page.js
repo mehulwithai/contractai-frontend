@@ -15,13 +15,16 @@ const params = useSearchParams()
 const paymentStatus = params.get('payment')
 
 useEffect(() => {
-supabase.auth.getSession().then(({ data: { session } }) => {
-if (!session) {
-router.push('/login')
-return
-}
-checkSub()
-})
+  if (typeof window !== 'undefined' && window.whop) {
+    try { window.whop.track('view_content', { value: 10, currency: 'USD' }) } catch (e) {}
+  }
+  supabase.auth.getSession().then(({ data: { session } }) => {
+    if (!session) {
+      router.push('/login')
+      return
+    }
+    checkSub()
+  })
 }, [])
 
 const checkSub = async () => {
