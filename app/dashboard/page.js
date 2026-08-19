@@ -50,6 +50,9 @@ export default function Dashboard() {
   }
 
   const handleUpload = async (file) => {
+    if (typeof window !== 'undefined' && window.whop) {
+      try { window.whop.track('lead') } catch (e) {}
+    }
     setLoading(true)
     setError('')
     try {

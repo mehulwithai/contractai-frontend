@@ -32,15 +32,18 @@ setSubscribed(data?.is_subscribed || false)
 }
 
 const handleSubscribe = async () => {
-setLoading(true)
-setError('')
-try {
-const data = await apiCall('/api/billing/checkout', { method: 'POST' })
-if (data?.checkout_url) window.location.href = data.checkout_url
-} catch (e) {
-setError('Could not start checkout. Please try again.')
-setLoading(false)
-}
+  if (typeof window !== 'undefined' && window.whop) {
+    try { window.whop.track('add_to_cart', { value: 10, currency: 'USD' }) } catch (e) {}
+  }
+  setLoading(true)
+  setError('')
+  try {
+    const data = await apiCall('/api/billing/checkout', { method: 'POST' })
+    if (data?.checkout_url) window.location.href = data.checkout_url
+  } catch (e) {
+    setError('Could not start checkout. Please try again.')
+    setLoading(false)
+  }
 }
 
 const handlePortal = async () => {

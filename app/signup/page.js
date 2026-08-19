@@ -30,6 +30,9 @@ export default function SignupPage() {
     try {
       const { error } = await supabase.auth.signUp({ email, password })
       if (error) throw error
+      if (typeof window !== 'undefined' && window.whop) {
+        try { window.whop.track('complete_registration') } catch (e) {}
+      }
       // Auto sign in after signup
       const { error: signInError } = await supabase.auth.signInWithPassword({ email, password })
       if (signInError) throw signInError
