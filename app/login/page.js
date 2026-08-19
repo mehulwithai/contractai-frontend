@@ -12,7 +12,11 @@ export default function LoginPage() {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) router.push('/dashboard')
+      if (session) {
+        const searchParams = new URLSearchParams(window.location.search)
+        const next = searchParams.get('next') || '/dashboard'
+        router.replace(next)
+      }
     })
   }, [])
 
@@ -23,7 +27,9 @@ export default function LoginPage() {
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) throw error
-      router.push('/dashboard')
+      const searchParams = new URLSearchParams(window.location.search)
+      const next = searchParams.get('next') || '/dashboard'
+      router.replace(next)
     } catch (err) {
       setError(err.message || 'Sign in failed. Check your email and password.')
     } finally {
@@ -34,12 +40,13 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     setError('')
     try {
+      const searchParams = new URLSearchParams(window.location.search)
+      const next = searchParams.get('next') || '/dashboard'
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        options: { redirectTo: `${window.location.origin}/dashboard` }
+        options: { redirectTo: `${window.location.origin}${next}` }
       })
       if (error) throw error
-      // Browser redirects to Google automatically — no further code runs here
     } catch (err) {
       setError(err.message || 'Google sign in failed.')
     }

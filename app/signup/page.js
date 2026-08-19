@@ -12,10 +12,14 @@ export default function SignupPage() {
   const router = useRouter()
 
   useEffect(() => {
-  supabase.auth.getSession().then(({ data: { session } }) => {
-    if (session) router.push('/dashboard')
-  })
-}, [])
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        const searchParams = new URLSearchParams(window.location.search)
+        const next = searchParams.get('next') || '/dashboard'
+        router.replace(next)
+      }
+    })
+  }, [])
 
   const handleSignup = async (e) => {
     e.preventDefault()
@@ -29,7 +33,9 @@ export default function SignupPage() {
       // Auto sign in after signup
       const { error: signInError } = await supabase.auth.signInWithPassword({ email, password })
       if (signInError) throw signInError
-      router.push('/dashboard')
+      const searchParams = new URLSearchParams(window.location.search)
+      const next = searchParams.get('next') || '/dashboard'
+      router.replace(next)
     } catch (err) {
       setError(err.message || 'Sign up failed. Please try again.')
     } finally {
@@ -40,9 +46,11 @@ export default function SignupPage() {
   const handleGoogleSignup = async () => {
     setError('')
     try {
+      const searchParams = new URLSearchParams(window.location.search)
+      const next = searchParams.get('next') || '/dashboard'
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        options: { redirectTo: `${window.location.origin}/dashboard` }
+        options: { redirectTo: `${window.location.origin}${next}` }
       })
       if (error) throw error
     } catch (err) {

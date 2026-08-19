@@ -88,10 +88,10 @@ export default function Footer() {
               Connect
             </div>
             <div style={{ display: 'flex', gap: '10px' }}>
-              <SocialIcon label="X" href="https://twitter.com">
+              <SocialIcon label="X" href="https://x.com/Mehulpat14">
                 <path d="M18 2h3l-7.5 8.6L21.5 22H15l-5-6.6L4 22H1l8-9.1L1 2h6.6l4.4 5.8L18 2z" />
               </SocialIcon>
-              <SocialIcon label="LinkedIn" href="https://linkedin.com">
+              <SocialIcon label="LinkedIn" href="https://www.linkedin.com/in/mehul-patel14/">
                 <path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48s1.34 2.98 2.98 2.98 2.98-1.34 2.98-2.98S6.62 3.5 4.98 3.5zM2.4 21.5h5.16V9.16H2.4V21.5zm7.6-12.34h4.95v1.69h.07c.69-1.3 2.37-2.67 4.88-2.67 5.22 0 6.18 3.44 6.18 7.91v8.41h-5.16v-7.46c0-1.78-.03-4.06-2.48-4.06-2.48 0-2.86 1.94-2.86 3.94v7.58H10V9.16z" />
               </SocialIcon>
             </div>
