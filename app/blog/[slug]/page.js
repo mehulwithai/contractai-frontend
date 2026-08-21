@@ -195,9 +195,14 @@ export default async function BlogPostPage({ params }) {
               <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '16px' }}>
                 Recommended Guides
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {relatedPosts.map(rel => (
-                  <div key={rel.slug} style={{ borderBottom: '1px solid var(--border)', paddingBottom: '14px' }}>
+                  <div key={rel.slug} className="hover-effect" style={{
+                    background: 'var(--bg)',
+                    border: '1px solid var(--border)',
+                    borderRadius: '10px',
+                    padding: '14px 16px',
+                  }}>
                     <span style={{ fontSize: '11px', color: 'var(--accent)', fontWeight: 600 }}>{rel.category}</span>
                     <h4 style={{ fontSize: '14px', fontWeight: 600, margin: '4px 0 6px', lineHeight: 1.3 }}>
                       <Link href={`/blog/${rel.slug}`} style={{ color: 'var(--text-primary)', textDecoration: 'none' }}>

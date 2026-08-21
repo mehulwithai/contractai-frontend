@@ -31,7 +31,7 @@ export default function BlogIndexPage() {
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '0 24px 72px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
           {BLOG_POSTS.map(post => (
-            <article key={post.slug} style={{
+            <article key={post.slug} className="card card-hover hover-effect" style={{
               background: 'var(--bg-secondary)',
               border: '1px solid var(--border)',
               borderRadius: '16px',
@@ -39,7 +39,7 @@ export default function BlogIndexPage() {
               display: 'flex',
               flexDirection: 'column',
               justify: 'space-between',
-              transition: 'border-color 0.2s',
+              cursor: 'pointer',
             }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
