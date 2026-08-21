@@ -28,9 +28,9 @@ export default function Footer() {
                 fontSize: '13px',
                 fontWeight: 700,
                 fontFamily: 'var(--sans)',
-              }}>C</span>
+              }}>L</span>
               <span style={{ fontFamily: 'var(--inter)', fontWeight: 600, fontSize: '16px', color: 'var(--text-primary)' }}>
-                ContractAI
+                LetractAI
               </span>
             </div>
             <p style={{  fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '240px', fontWeight: 500 }}>
@@ -108,10 +108,10 @@ export default function Footer() {
           gap: '12px',
         }}>
           <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-            © {new Date().getFullYear()} ContractAI. All rights reserved.
+            © {new Date().getFullYear()} LetractAI. All rights reserved.
           </p>
           <p style={{ fontSize: '12px', color: 'var(--text-muted)', textAlign: 'right' }}>
-            ContractAI is not a law firm and does not provide legal advice.
+            LetractAI is not a law firm and does not provide legal advice.
           </p>
         </div>
       </div>

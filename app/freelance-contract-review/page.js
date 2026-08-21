@@ -27,7 +27,7 @@ export default function FreelanceContractReviewPage() {
           AI Contract Review for Freelancers
         </h1>
         <p style={{ fontSize: '18px', color: 'var(--text-secondary)', maxWidth: '720px', margin: '0 auto 32px', lineHeight: 1.6 }}>
-          Never get burned by unpaid invoices, unlimited revision demands, or broad IP grabs. ContractAI helps freelancers and independent contractors spot dangerous client terms before signing.
+          Never get burned by unpaid invoices, unlimited revision demands, or broad IP grabs. LetractAI helps freelancers and independent contractors spot dangerous client terms before signing.
         </p>
         <Link href="/signup" style={{ background: 'var(--accent)', color: '#fff', padding: '14px 28px', borderRadius: '10px', fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
           Review Your Freelance Contract Free

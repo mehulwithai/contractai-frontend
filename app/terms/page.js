@@ -1,6 +1,6 @@
 import Footer from '../../components/Footer'
 
-export const metadata = { title: 'Terms of Service — ContractAI' }
+export const metadata = { title: 'Terms of Service — LetractAI' }
 
 export default function TermsPage() {
   return (
@@ -14,12 +14,12 @@ export default function TermsPage() {
         </h1>
 
         <Section title="1. Acceptance of terms">
-          By creating an account or using ContractAI, you agree to these Terms of Service. If you
+          By creating an account or using LetractAI, you agree to these Terms of Service. If you
           don't agree with any part of these terms, please don't use the service.
         </Section>
 
-        <Section title="2. What ContractAI is — and isn't">
-          ContractAI is an AI-powered tool that analyses contracts you upload and surfaces potential
+        <Section title="2. What LetractAI is — and isn't">
+          LetractAI is an AI-powered tool that analyses contracts you upload and surfaces potential
           risks in plain language. It is not a law firm, does not provide legal advice, and does not
           create an attorney-client relationship of any kind. For binding legal advice, you should
           consult a licensed attorney in your jurisdiction.
@@ -55,7 +55,7 @@ export default function TermsPage() {
         </Section>
 
         <Section title="8. Limitation of liability">
-          ContractAI and its operators are not liable for any decisions made, damages incurred, or
+          LetractAI and its operators are not liable for any decisions made, damages incurred, or
           losses suffered as a result of relying on the AI-generated review. The service is provided
           "as is" without warranties of any kind.
         </Section>

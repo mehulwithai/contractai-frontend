@@ -54,8 +54,8 @@ export default function Navbar() {
           padding: '2px 8px',
           fontSize: '13px',
           fontWeight: 700,
-        }}>C</span>
-        ContractAI
+        }}>L</span>
+        LetractAI
       </a>
 
       {/* Right side */}

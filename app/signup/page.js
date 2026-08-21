@@ -173,7 +173,7 @@ export default function SignupPage() {
 
         <p style={{ textAlign: 'center', marginTop: '12px', color: 'var(--text-muted)', fontSize: '12px' }}>
           By signing up you agree to our Terms of Service.
-          ContractAI is not a law firm.
+          LetractAI is not a law firm.
         </p>
       </div>
     </div>

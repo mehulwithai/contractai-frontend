@@ -7,7 +7,7 @@ export default function LandingPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'ContractAI',
+    name: 'LetractAI',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'All',
     offers: {
@@ -79,7 +79,7 @@ function Hero() {
             fontWeight: 500,
             lineHeight: 1.7,
           }}>
-            Upload any contract. In under a minute, ContractAI flags the clauses
+            Upload any contract. In under a minute, LetractAI flags the clauses
             that could hurt you, explains why in plain English, and tells you
             exactly what to ask for instead.
           </p>
@@ -286,7 +286,7 @@ function ComparisonTable() {
             <thead>
               <tr style={{ background: 'var(--bg-secondary)' }}>
                 <th style={cellStyle(true)}></th>
-                <th style={{ ...cellStyle(true), color: 'var(--accent)' }}>ContractAI</th>
+                <th style={{ ...cellStyle(true), color: 'var(--accent)' }}>LetractAI</th>
                 <th style={cellStyle(true)}>A lawyer</th>
                 <th style={cellStyle(true)}>Pasting into ChatGPT</th>
               </tr>
@@ -398,7 +398,7 @@ function Pricing() {
 
 function FAQ() {
   const faqs = [
-    { q: 'Is this a replacement for a lawyer?', a: 'No. ContractAI helps you understand what you\'re signing and flag obvious red flags fast. For high-stakes or unusually complex agreements, we\'ll always recommend a qualified lawyer — and our review even tells you when that\'s the smart move.' },
+    { q: 'Is this a replacement for a lawyer?', a: 'No. LetractAI helps you understand what you\'re signing and flag obvious red flags fast. For high-stakes or unusually complex agreements, we\'ll always recommend a qualified lawyer — and our review even tells you when that\'s the smart move.' },
     { q: 'What file types can I upload?', a: 'PDF and Word (.docx) files, up to 10MB. That covers the vast majority of contracts you\'ll receive by email.' },
     { q: 'Is my contract data kept private?', a: 'Yes. Your documents are stored securely and never used to train any AI model. Only you can see your own reviews.' },
     { q: 'What happens after my free review?', a: 'You can upgrade to unlimited reviews for $10/month, cancel anytime. No card required to try your first one.' },

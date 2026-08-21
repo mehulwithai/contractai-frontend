@@ -1,6 +1,6 @@
 import Footer from '../../components/Footer'
 
-export const metadata = { title: 'Privacy Policy — ContractAI' }
+export const metadata = { title: 'Privacy Policy — LetractAI' }
 
 export default function PrivacyPage() {
   return (
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
         </Section>
 
         <Section title="Contact">
-          Questions about this policy can be directed to the ContractAI team via the contact option
+          Questions about this policy can be directed to the LetractAI team via the contact option
           in your account settings.
         </Section>
       </div>

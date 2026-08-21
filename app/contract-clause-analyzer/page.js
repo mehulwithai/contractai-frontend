@@ -105,7 +105,7 @@ export default function ContractClauseAnalyzerPage() {
       <section style={{ maxWidth: '1040px', margin: '0 auto', padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ background: 'var(--accent)', color: '#fff', padding: '40px 24px', borderRadius: '16px', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '12px' }}>Analyze Every Clause in Your Contract</h2>
-          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Let ContractAI inspect your agreement line-by-line in seconds.</p>
+          <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '24px' }}>Let LetractAI inspect your agreement line-by-line in seconds.</p>
           <Link href="/signup" style={{ background: '#fff', color: 'var(--accent)', padding: '12px 26px', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             Upload & Analyze Clauses
           </Link>

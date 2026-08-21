@@ -87,7 +87,7 @@ export default function ContractAnalyzerPage() {
           </div>
 
           <div style={{ textAlign: 'center', fontSize: '13px', color: 'var(--text-muted)' }}>
-            ⚡ Generated automatically by ContractAI Engine in seconds
+            ⚡ Generated automatically by LetractAI Engine in seconds
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function ContractAnalyzerPage() {
             Supported Contract Types
           </h2>
           <p style={{ fontSize: '16px', color: 'var(--text-secondary)', textAlign: 'center', marginBottom: '40px' }}>
-            ContractAI analyzes your agreement and highlights potential risks, important clauses, and areas worth reviewing:
+            LetractAI analyzes your agreement and highlights potential risks, important clauses, and areas worth reviewing:
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
