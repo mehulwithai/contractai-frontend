@@ -45,6 +45,7 @@ export default function Footer() {
             </div>
             <FooterLink href="/#how-it-works">How it works</FooterLink>
             <FooterLink href="/#pricing">Pricing</FooterLink>
+            <FooterLink href="/blog">Blog & Guides</FooterLink>
             <FooterLink href="/#faq">FAQ</FooterLink>
             <FooterLink href="/signup">Get started</FooterLink>
           </div>

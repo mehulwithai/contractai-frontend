@@ -74,6 +74,13 @@ export default function Navbar() {
           {theme === 'light' ? '🌙' : '☀️'}
         </button>
 
+        <a href="/blog" style={{
+          color: 'var(--text-secondary)',
+          fontSize: '14px',
+          textDecoration: 'none',
+          fontWeight: 500,
+        }}>Blog</a>
+
         {user ? (
           <>
             <a href="/dashboard" style={{

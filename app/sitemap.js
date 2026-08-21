@@ -1,3 +1,5 @@
+import { BLOG_POSTS } from '../lib/blogData'
+
 export default async function sitemap() {
   const getBaseUrl = () => {
     if (process.env.NEXT_PUBLIC_APP_URL) return process.env.NEXT_PUBLIC_APP_URL;
@@ -9,8 +11,12 @@ export default async function sitemap() {
 
   const baseUrl = getBaseUrl().replace(/\/$/, '');
 
+  const blogRoutes = BLOG_POSTS.map(post => `/blog/${post.slug}`)
+
   const routes = [
     '',
+    '/blog',
+    ...blogRoutes,
     '/ai-contract-review',
     '/contract-review',
     '/contract-analyzer',
@@ -31,7 +37,7 @@ export default async function sitemap() {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
-    changeFrequency: route === '' ? 'daily' : 'monthly',
-    priority: route === '' ? 1.0 : 0.6,
+    changeFrequency: route === '' || route === '/blog' ? 'daily' : 'monthly',
+    priority: route === '' ? 1.0 : route.startsWith('/blog') ? 0.8 : 0.6,
   }))
 }
